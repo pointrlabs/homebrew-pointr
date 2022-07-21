@@ -9,5 +9,4 @@ After that you can install the packages in this tap like any other.
 `brew install [name of the package]`
 
 For example
-`brew install --HEAD maplibre-gl-native`
-There is a --HEAD argument because it is not a release.
+`brew install maplibre-gl-native`
