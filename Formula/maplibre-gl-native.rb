@@ -5,10 +5,10 @@ class MaplibreGlNative < Formula
   desc ""
   homepage "https://maplibre.org"
   license "BSD-2-Clause"
-  head "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"v0.2" ,revision:"86e6a5d51fe9e8e525da39037690a97ac1dd896d"
+  head "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"v0.3" ,revision:"5a384e7140538f0c543c35fe9bbb3b7759e61e0e"
 
-  depends_on "cmake" => [:build, "3.0"]
-  depends_on "qt5" => "5.15.3"
+  depends_on "cmake" => [:build, "3.16"]
+  depends_on "qt6" => "6.0.1"
   depends_on "ninja" => :build
 
   def install
