@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class MaplibreGlNative < Formula
+class MaplibreMapRenderer < Formula
   desc ""
   homepage "https://maplibre.org"
   license "BSD-2-Clause"
