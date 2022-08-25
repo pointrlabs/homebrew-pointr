@@ -6,7 +6,7 @@ class MaplibreGlNative < Formula
   homepage "https://maplibre.org"
   license "BSD-2-Clause"
   head "https://github.com/pointrlabs/maplibre-gl-native.git", branch:"develop"
-  url "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"v0.3", revision:"5a384e7140538f0c543c35fe9bbb3b7759e61e0e"
+  url "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"v0.4", revision:"613485188f5bb92a438a48ee7af16eb25a55e6dd"
 
   depends_on "cmake" => [:build, "3.16"]
   depends_on "ninja" => [:build, "1.10.2"]
