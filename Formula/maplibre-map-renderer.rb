@@ -6,7 +6,7 @@ class MaplibreMapRenderer < Formula
   homepage "https://maplibre.org"
   license "BSD-2-Clause"
   head "https://github.com/pointrlabs/maplibre-gl-native.git", branch:"develop"
-  url "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"version/map-renderer/1.0", revision:"49fb8f030283136ac33f2fb5a64e0b56800c5bad"
+  url "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"version/map-renderer/1.0", revision:"30434314e43ae0145a2c67ccbd6b07f1229f4c5b"
 
   depends_on "cmake" => [:build, "3.16"]
   depends_on "ninja" => [:build, "1.10.2"]
