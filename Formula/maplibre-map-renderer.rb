@@ -13,7 +13,7 @@ class MaplibreMapRenderer < Formula
 
   def install
     system "cmake -S . -B build -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=#{prefix} -DMBGL_WITH_MAP_RENDERER=ON"
-    system "cmake --build build --target maplibre-map-renderer"
+    system "cmake --build build --target map-renderer"
     system "cmake --install build"
   end
 end
