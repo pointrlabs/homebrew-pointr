@@ -13,8 +13,8 @@ class MaplibreGlNative < Formula
   depends_on "qt6" => "6.0.1"
 
   def install
-    system "cmake -S . -B build -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=#{prefix} -DMBGL_WITH_QT=ON -DMBGL_QT_LIBRARY_ONLY=ON"
-    system "cmake --build build --target qmaplibregl"
-    system "cmake --install build"
+    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja", "-DMBGL_WITH_QT=ON", "-DMBGL_QT_LIBRARY_ONLY=ON", *std_cmake_args
+    system "cmake", "--build", "build", "--target", "qmaplibregl"
+    system "cmake", "--install", "build"
   end
 end

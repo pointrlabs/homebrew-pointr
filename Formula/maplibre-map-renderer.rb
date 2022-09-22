@@ -12,8 +12,8 @@ class MaplibreMapRenderer < Formula
   depends_on "ninja" => [:build, "1.10.2"]
 
   def install
-    system "cmake -S . -B build -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=#{prefix} -DMBGL_WITH_MAP_RENDERER=ON"
-    system "cmake --build build --target map-renderer"
-    system "cmake --install build"
+    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja", "-DMBGL_WITH_MAP_RENDERER=ON", *std_cmake_args
+    system "cmake", "--build", "build", "--target", "map-renderer"
+    system "cmake", "--install", "build"
   end
 end
