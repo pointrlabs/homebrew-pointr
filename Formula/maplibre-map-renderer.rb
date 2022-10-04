@@ -3,8 +3,8 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class MaplibreMapRenderer < Formula
   desc ""
-  homepage "https://maplibre.org"
-  license "BSD-2-Clause"
+  homepage "https://github.com/pointrlabs/maplibre-gl-native/tree/develop/map-renderer"
+  license "MIT"
   head "https://github.com/pointrlabs/maplibre-gl-native.git", branch:"develop"
   url "https://github.com/pointrlabs/maplibre-gl-native.git", tag:"version/map-renderer/1.0", revision:"30434314e43ae0145a2c67ccbd6b07f1229f4c5b"
 
