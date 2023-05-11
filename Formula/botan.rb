@@ -1,4 +1,4 @@
-class BotanAT2 < Formula
+class Botan < Formula
   desc "Cryptographic algorithms and formats library in C++"
   homepage "https://botan.randombit.net/"
   url "https://botan.randombit.net/releases/Botan-2.19.3.tar.xz"
