@@ -7,9 +7,12 @@ class MaplibreMapRenderer < Formula
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
+  uses_from_macos "curl"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja", "-DMBGL_WITH_MAP_RENDERER=ON", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja",
+      "-DMBGL_WITH_MAP_RENDERER=ON", "-DMBGL_WITH_WERROR=OFF",
+      *std_cmake_args
     system "cmake", "--build", "build", "--target", "map-renderer"
     system "cmake", "--install", "build"
   end
