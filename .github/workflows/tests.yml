@@ -4,16 +4,20 @@ on:
     branches:
       - develop
   pull_request:
+env:
+  HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-13]
+        os: [ubuntu-22.04, macos-13, [self-hosted, macos, arm64], [self-hosted, macos, X64]]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          token: ${{ github.token }}
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache

@@ -1,5 +1,5 @@
 class Botan < Formula
-  desc "Cryptographic algorithms and formats library in C++"
+  desc "Cryptographic algorithms and formats library in C++ (v2)"
   homepage "https://botan.randombit.net/"
   url "https://botan.randombit.net/releases/Botan-2.19.3.tar.xz"
   sha256 "dae047f399c5a47f087db5d3d9d9e8f11ae4985d14c928d71da1aff801802d55"
@@ -22,7 +22,7 @@ class Botan < Formula
     sha256 x86_64_linux:   "7c5b47bf0f430903a03e71cf065010af7095c30ce8a55421759130a1c11572ce"
   end
 
-  depends_on "pkg-config" => :build
+  depends_on "pkg-config" => [:build, :test]
   depends_on "python@3.11"
   depends_on "sqlite"
 
