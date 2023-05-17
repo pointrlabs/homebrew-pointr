@@ -13,8 +13,10 @@ class MaplibreGlNative < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja", "-DMBGL_WITH_QT=ON", "-DMBGL_QT_LIBRARY_ONLY=ON", \
-      "-DCMAKE_C_COMPILER=clang", "-DCMAKE_CXX_COMPILER=clang++", "-DMBGL_WITH_WERROR=OFF", "-DMBGL_QT_WITH_INTERNAL_SQLITE=ON", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-G", "Ninja",
+      "-DMBGL_WITH_QT=ON", "-DMBGL_QT_LIBRARY_ONLY=ON",
+      "-DCMAKE_C_COMPILER=clang", "-DCMAKE_CXX_COMPILER=clang++",
+      "-DMBGL_WITH_WERROR=OFF", "-DMBGL_QT_WITH_INTERNAL_SQLITE=ON", *std_cmake_args
     system "cmake", "--build", "build", "--target", "qmaplibregl"
     system "cmake", "--install", "build"
   end
