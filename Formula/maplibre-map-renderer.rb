@@ -7,6 +7,8 @@ class MaplibreMapRenderer < Formula
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
+  depends_on "glfw"
+  depends_on "libuv"
   uses_from_macos "curl"
 
   def install
