@@ -7,9 +7,12 @@ class MaplibreMapRenderer < Formula
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "glfw"
-  depends_on "libuv"
   uses_from_macos "curl"
+  on_linux do
+    depends_on "libuv"
+    depends_on "mesa-glu"
+    depends_on "mesalib-glw"
+  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", "-G", "Ninja",
