@@ -5,6 +5,12 @@ class MaplibreMapRenderer < Formula
   license "MIT"
   head "https://github.com/pointrlabs/maplibre-gl-native.git", branch: "develop"
 
+  bottle do
+    root_url "https://github.com/pointrlabs/homebrew-vendor/releases/download/maplibre-map-renderer-1.0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, ventura: "8788c2cf89b6e39595cc7a448cd7e19becd2be8bba90f0428611e237245b4ad1"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   uses_from_macos "curl"
