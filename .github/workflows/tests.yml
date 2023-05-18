@@ -4,6 +4,8 @@ on:
     branches:
       - develop
   pull_request:
+env:
+  HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 jobs:
   test-bot:
     strategy:
@@ -14,6 +16,8 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          token: ${{ github.token }}
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
