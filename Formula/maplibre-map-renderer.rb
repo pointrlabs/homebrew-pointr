@@ -22,7 +22,7 @@ class MaplibreMapRenderer < Formula
     system "cmake", "-S", ".", "-B", "build", "-G", "Ninja",
       "-DMBGL_WITH_MAP_RENDERER=ON", "-DMBGL_WITH_WERROR=OFF",
       *std_cmake_args
-    system "cmake", "--build", "build", "--target", "map-renderer"
+    system "cmake", "--build", "build", "--target", "map-renderer", "mbgl-render-test-runner"
     system "cmake", "--install", "build"
   end
 end
