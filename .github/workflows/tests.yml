@@ -31,12 +31,6 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
-      - name: Install additional Linux dependencies
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y --no-install-recommends libgl1-mesa-dev
-
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup

@@ -12,9 +12,13 @@ jobs:
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          token: ${{ env.HOMEBREW_GITHUB_API_TOKEN }}
 
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
+        with:
+          token: ${{ env.HOMEBREW_GITHUB_API_TOKEN }}
 
       - name: Pull bottles
         env:
