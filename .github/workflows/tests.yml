@@ -33,7 +33,9 @@ jobs:
 
       - name: Install additional Linux dependencies
         if: runner.os == 'Linux'
-        run: apt-get update -y && apt-get install -y --no-install-recommends libgl1-mesa-dev
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends libgl1-mesa-dev
 
       - run: brew test-bot --only-cleanup-before
 

@@ -16,8 +16,6 @@ class MaplibreMapRenderer < Formula
   uses_from_macos "curl"
   on_linux do
     depends_on "libuv"
-    depends_on "mesa-glu"
-    depends_on "mesalib-glw"
   end
 
   def install
