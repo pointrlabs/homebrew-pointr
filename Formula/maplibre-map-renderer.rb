@@ -16,15 +16,22 @@ class MaplibreMapRenderer < Formula
   uses_from_macos "curl"
   on_linux do
     depends_on "libuv"
-    depends_on "mesa-glu"
-    depends_on "mesalib-glw"
+    depends_on "libx11"
+    depends_on "libxau"
+    depends_on "libxcb"
+    depends_on "libxdmcp"
+    depends_on "libxext"
+    depends_on "libxrandr"
+    depends_on "libxrender"
+    depends_on "libxtst"
+    depends_on "mesa"
   end
 
   def install
     system "cmake", "-S", ".", "-B", "build", "-G", "Ninja",
       "-DMBGL_WITH_MAP_RENDERER=ON", "-DMBGL_WITH_WERROR=OFF",
       *std_cmake_args
-    system "cmake", "--build", "build", "--target", "map-renderer"
+    system "cmake", "--build", "build", "--target", "map-renderer", "mbgl-render-test-runner"
     system "cmake", "--install", "build"
   end
 end
