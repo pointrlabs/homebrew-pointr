@@ -16,6 +16,15 @@ class MaplibreMapRenderer < Formula
   uses_from_macos "curl"
   on_linux do
     depends_on "libuv"
+    depends_on "libx11"
+    depends_on "libxau"
+    depends_on "libxcb"
+    depends_on "libxdmcp"
+    depends_on "libxext"
+    depends_on "libxrandr"
+    depends_on "libxrender"
+    depends_on "libxtst"
+    depends_on "mesa"
   end
 
   def install
