@@ -8,9 +8,10 @@ class MaplibreGlNative < Formula
   bottle do
     root_url "https://github.com/pointrlabs/homebrew-vendor/releases/download/maplibre-gl-native-0.5"
     rebuild 1
-    sha256 cellar: :any,                 ventura:      "b09808287c3e7b1b7d30f3bbfbfd465430ecab5d0a02466fb0915ec856ab4de0"
-    sha256 cellar: :any,                 monterey:     "ec52135fa73f2b29c2e33e026394b2f61925efa1ab067fced617e219a1cd060a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e2dca19547b2ae447294c238150f12a043fb753426ee3e73d09eaf26192b40d1"
+    sha256 cellar: :any,                 arm64_monterey: "0933d9f23f44a7659348954d4ac9f46b3d61611acb018a1b937744ccc07d35c8"
+    sha256 cellar: :any,                 ventura:        "b09808287c3e7b1b7d30f3bbfbfd465430ecab5d0a02466fb0915ec856ab4de0"
+    sha256 cellar: :any,                 monterey:       "ec52135fa73f2b29c2e33e026394b2f61925efa1ab067fced617e219a1cd060a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2dca19547b2ae447294c238150f12a043fb753426ee3e73d09eaf26192b40d1"
   end
 
   depends_on "cmake" => :build
