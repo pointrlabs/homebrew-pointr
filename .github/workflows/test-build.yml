@@ -1,13 +1,12 @@
 name: test-build
 on:
-  pull_request_target:
-    types:
-      - labeled
+  pull_request:
+    types: [ labeled ]
 env:
   HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 jobs:
   build-formulae:
-    if: contains(github.event.pull_request.labels.*.name, 'test-build')
+    if: github.event.label.name == 'test-build'
     strategy:
       matrix:
         os: [ubuntu-22.04, macos-13]

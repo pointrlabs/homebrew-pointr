@@ -1,13 +1,12 @@
 name: publish
 on:
-  pull_request_target:
-    types:
-      - labeled
+  pull_request:
+    types: [ labeled ]
 env:
   HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 jobs:
   publish:
-    if: contains(github.event.pull_request.labels.*.name, 'publish')
+    if: github.event.label.name == 'publish'
     runs-on: ubuntu-22.04
     steps:
       - name: Set up Homebrew
