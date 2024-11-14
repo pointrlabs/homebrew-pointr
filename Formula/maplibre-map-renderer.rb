@@ -6,7 +6,7 @@ class MaplibreMapRenderer < Formula
   head "https://github.com/pointrlabs/maplibre-gl-native.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/pointrlabs/maplibre-gl-native/releases/download/maplibre-map-renderer-1.1"
+    root_url "https://github.com/pointrlabs/maplibre-gl-native/releases/download/version%2Fmap-renderer%2F1.1"
     sha256 cellar: :any_skip_relocation, sequoia: "06dfe7da2bf32e2ee235fff57faec83faecc10b1e1dac8388ab854d96a3443c3"
   end
 
