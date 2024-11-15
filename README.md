@@ -21,7 +21,7 @@ brew install maplibre-map-renderer
 To upgrade a formula:
 ```
 brew update
-brew upgrage pointrlabs/vendor/formula-name
+brew upgrade pointrlabs/vendor/formula-name
 ```
 
 
